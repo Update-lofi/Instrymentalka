@@ -1,40 +1,40 @@
 {% extends "layout.html" %}
 
-{% block title %}Delete Person - MvcDataViews{% endblock %}
+{% block title %}Удаление человека - MvcDataViews{% endblock %}
 
 {% block content %}
-<h2>Delete Person</h2>
+<h2>Удаление человека</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Вы уверены, что хотите удалить эту запись?</h3>
 
 <fieldset>
-    <legend>Person Details</legend>
+    <legend>Информация о человеке</legend>
     
     <div class="display-field">
-        <strong>Id:</strong> {{ person.id }}
+        <strong>Идентификатор:</strong> {{ person.id }}
     </div>
     
     <div class="display-field">
-        <strong>Name:</strong> {{ person.name }}
+        <strong>Имя:</strong> {{ person.name }}
     </div>
     
     <div class="display-field">
-        <strong>Age:</strong> {{ person.age }}
+        <strong>Возраст:</strong> {{ person.age }}
     </div>
     
     <div class="display-field">
-        <strong>Phone:</strong> {{ person.phone }}
+        <strong>Телефон:</strong> {{ person.phone }}
     </div>
     
     <div class="display-field">
-        <strong>Email:</strong> {{ person.email }}
+        <strong>Электронная почта:</strong> {{ person.email }}
     </div>
 </fieldset>
 
 <form method="POST" action="{{ url_for('person.delete', id=person.id) }}">
     <p>
-        <input type="submit" value="Delete" class="btn"> |
-        <a href="{{ url_for('person.index') }}">Back to List</a>
+        <input type="submit" value="Удалить" class="btn"> |
+        <a href="{{ url_for('person.index') }}">Вернуться к списку</a>
     </p>
 </form>
 {% endblock %}

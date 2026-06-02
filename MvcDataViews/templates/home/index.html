@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 
-{% block title %}Home - MvcDataViews{% endblock %}
+{% block title %}Главная - MvcDataViews{% endblock %}
 
 {% block content %}
-<h2>Welcome to Flask MVC</h2>
+<h2>Добро пожаловать в Flask MVC!</h2>
 <p>
-    To learn more about Flask visit <a href="http://flask.pocoo.org">Flask Website</a>.
+    Чтобы узнать больше о Flask, посетите <a href="http://flask.pocoo.org">сайт Flask</a>.
 </p>
 
 <p>
-    <a href="{{ url_for('person.index') }}" class="btn">Open Person List</a>
+    <a href="{{ url_for('person.index') }}" class="btn">Открыть список людей</a>
 </p>
 {% endblock %}

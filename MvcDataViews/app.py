@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for
 from controllers.person_controller import person_bp
 
 app = Flask(__name__)
-app.secret_key = 'your-secret-key-here'  # Замените на случайную строку
+app.secret_key = 'your-secret-key-here-change-this'  # Обязательно замените на случайную строку!
 
 # Регистрация blueprint
 app.register_blueprint(person_bp)

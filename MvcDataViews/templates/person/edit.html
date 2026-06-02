@@ -1,14 +1,13 @@
 {% extends "layout.html" %}
 
-{% block title %}Edit Person - MvcDataViews{% endblock %}
+{% block title %}Изменение человека - MvcDataViews{% endblock %}
 
 {% block content %}
-<h2>Edit Person</h2>
+<h2>Изменение человека</h2>
 
 <form method="POST" action="{{ url_for('person.edit', id=person.id) }}">
-    {{ form.hidden_tag() }}
     <fieldset>
-        <legend>Edit Person</legend>
+        <legend>Изменение данных человека</legend>
         
         <div class="form-group">
             {{ form.id.label }}<br>
@@ -51,12 +50,12 @@
         </div>
         
         <p>
-            <input type="submit" value="Update" class="btn">
+            <input type="submit" value="Обновить" class="btn">
         </p>
     </fieldset>
 </form>
 
 <div>
-    <a href="{{ url_for('person.index') }}">Back to List</a>
+    <a href="{{ url_for('person.index') }}">Вернуться к списку</a>
 </div>
 {% endblock %}

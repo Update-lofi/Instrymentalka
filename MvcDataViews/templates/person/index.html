@@ -1,29 +1,29 @@
 {% extends "layout.html" %}
 
-{% block title %}Person List - MvcDataViews{% endblock %}
+{% block title %}Список людей - MvcDataViews{% endblock %}
 
 {% block content %}
-<h2>Person List</h2>
+<h2>Список людей</h2>
 
 <p>
-    <a href="{{ url_for('person.create') }}" class="btn">Create New</a>
+    <a href="{{ url_for('person.create') }}" class="btn">Создать нового</a>
 </p>
 
 <table>
     <tr>
         <th></th>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Phone</th>
-        <th>Email</th>
+        <th>Идентификатор</th>
+        <th>Имя</th>
+        <th>Возраст</th>
+        <th>Телефон</th>
+        <th>Электронная почта</th>
     </tr>
     {% for person in people %}
     <tr>
         <td>
-            <a href="{{ url_for('person.edit', id=person.id) }}">Edit</a> |
-            <a href="{{ url_for('person.details', id=person.id) }}">Details</a> |
-            <a href="{{ url_for('person.delete', id=person.id) }}">Delete</a>
+            <a href="{{ url_for('person.edit', id=person.id) }}">Изменить</a> |
+            <a href="{{ url_for('person.details', id=person.id) }}">Сведения</a> |
+            <a href="{{ url_for('person.delete', id=person.id) }}">Удалить</a>
         </td>
         <td>{{ person.id }}</td>
         <td>{{ person.name }}</td>
@@ -33,7 +33,7 @@
     </tr>
     {% else %}
     <tr>
-        <td colspan="6">No persons found. <a href="{{ url_for('person.create') }}">Create one!</a></td>
+        <td colspan="6">Люди не найдены. <a href="{{ url_for('person.create') }}">Создайте первого!</a></td>
     </tr>
     {% endfor %}
 </table>

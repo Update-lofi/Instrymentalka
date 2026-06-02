@@ -1,14 +1,13 @@
 {% extends "layout.html" %}
 
-{% block title %}Create Person - MvcDataViews{% endblock %}
+{% block title %}Создание человека - MvcDataViews{% endblock %}
 
 {% block content %}
-<h2>Create Person</h2>
+<h2>Создание человека</h2>
 
 <form method="POST" action="{{ url_for('person.create') }}">
-    {{ form.hidden_tag() }}
     <fieldset>
-        <legend>Create Person</legend>
+        <legend>Создание нового человека</legend>
         
         <div class="form-group">
             {{ form.id.label }}<br>
@@ -51,12 +50,12 @@
         </div>
         
         <p>
-            <input type="submit" value="Create" class="btn">
+            <input type="submit" value="Создать" class="btn">
         </p>
     </fieldset>
 </form>
 
 <div>
-    <a href="{{ url_for('person.index') }}">Back to List</a>
+    <a href="{{ url_for('person.index') }}">Вернуться к списку</a>
 </div>
 {% endblock %}
