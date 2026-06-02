@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}Home - MvcDataViews{% endblock %}
+
+{% block content %}
+<h2>Welcome to Flask MVC</h2>
+<p>
+    To learn more about Flask visit <a href="http://flask.pocoo.org">Flask Website</a>.
+</p>
+
+<p>
+    <a href="{{ url_for('person.index') }}" class="btn">Open Person List</a>
+</p>
+{% endblock %}

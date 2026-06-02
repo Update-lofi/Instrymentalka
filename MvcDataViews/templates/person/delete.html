@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}Delete Person - MvcDataViews{% endblock %}
+
+{% block content %}
+<h2>Delete Person</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+
+<fieldset>
+    <legend>Person Details</legend>
+    
+    <div class="display-field">
+        <strong>Id:</strong> {{ person.id }}
+    </div>
+    
+    <div class="display-field">
+        <strong>Name:</strong> {{ person.name }}
+    </div>
+    
+    <div class="display-field">
+        <strong>Age:</strong> {{ person.age }}
+    </div>
+    
+    <div class="display-field">
+        <strong>Phone:</strong> {{ person.phone }}
+    </div>
+    
+    <div class="display-field">
+        <strong>Email:</strong> {{ person.email }}
+    </div>
+</fieldset>
+
+<form method="POST" action="{{ url_for('person.delete', id=person.id) }}">
+    <p>
+        <input type="submit" value="Delete" class="btn"> |
+        <a href="{{ url_for('person.index') }}">Back to List</a>
+    </p>
+</form>
+{% endblock %}
