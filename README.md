@@ -10,7 +10,7 @@
 pip install flask
 ```
 
-2. Перейти в директорию "Task1":
+2. Перейти в директорию "MvcDataViews":
 ```cmd
 cd MvcDataViews
 ```
